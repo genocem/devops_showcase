@@ -2,9 +2,12 @@
 
 ## Architecture Overview
 
-<!-- Architecture diagram placeholder: to be added later -->
-
+![Architecture Diagram](./diagram.png)
 ## Microservices
+
+**Technologies:** Python, Flask, MongoEngine, Celery, Redis.
+
+**Technologies used in Jenkins pipeline:** Docker, Trivy, Azure Container Registry
 
 | Name | Repository | What it is for |
 |---|---|---|
@@ -16,18 +19,18 @@ These microservices communicate with each other using Celery tasks over Redis qu
 
 ## Frontend
 
-| Name | Repository | What it is for |
-|---|---|---|
-| Frontend | [devops_showcase_frontend](https://github.com/genocem/devops_showcase_frontend.git) | User-facing web application that drives the full flow across services. |
+| Name | Repository | What it is for | Technologies |
+|---|---|---|---|
+| Frontend | [devops_showcase_frontend](https://github.com/genocem/devops_showcase_frontend.git) | User-facing web application that drives the full flow across services. | TypeScript, React, Next.js,Jenkins (pipeline contains: Docker, Trivy, Azure Container Registry)  |
 
 ## GitOps 
 
-| Name | Repository | What it is for |
-|---|---|---|
-| GitOps | [devops_showcase_gitops](https://github.com/genocem/devops_showcase_gitops.git) | Contains Kubernetes bootstrap and deployment manifests/charts. |
+| Name | Repository | What it is for | Technologies |
+|---|---|---|---|
+| GitOps | [devops_showcase_gitops](https://github.com/genocem/devops_showcase_gitops.git) | Contains Kubernetes bootstrap and deployment manifests/charts. | Kubernetes, Helm, Argo CD, Argo Rollouts, Traefik, cert-manager, Prometheus, Grafana, Loki, Grafana Alloy |
 
 ## Provisioning
 
-| Name | Repository | What it is for |
-|---|---|---|
-| Azure Provisioning | [devops_showcase_azure_provisioning](https://github.com/genocem/devops_showcase_azure_provisioning.git) | Contains Terraform and Ansible automation for infrastructure provisioning and Jenkins setup. |
+| Name | Repository | What it is for | Technologies |
+|---|---|---|---|
+| Azure Provisioning | [devops_showcase_azure_provisioning](https://github.com/genocem/devops_showcase_azure_provisioning.git) | Contains Terraform and Ansible automation for infrastructure provisioning and Jenkins setup. | Azure, Terraform, Ansible, Ansible Vault, Jenkins, Docker, Azure Kubernetes Service (AKS), Azure Container Registry (ACR), Azure Virtual Machines |
